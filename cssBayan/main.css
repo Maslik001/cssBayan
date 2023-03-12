@@ -1,0 +1,81 @@
+body {
+    font-family: "Century Gothic", sans-serif;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #9d9d9d;
+}
+
+section {
+    padding-left: 0;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.mem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mem_container {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 1em;
+    padding: 1%;
+    background-color: rgb(204, 204, 204);
+    transition: all .3s linear;
+    cursor: pointer;
+}
+
+.cross {
+    width: 2vw;
+    transition: all .3s ease;
+}
+
+.cross_active {
+    transform: rotate(45deg);
+}
+
+.img {
+    width: 0;
+    max-height: 30vh;
+    display: flex;
+    border-radius: 1em;
+    margin: 1%;
+    justify-content: center;
+    transition: all 1s ease;
+    transform: scale(0.9);
+}
+
+.active {
+    width: 30vw;
+    transform: scale(0.9);
+}
+
+.mem:hover > .mem_container {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+    box-shadow: 8px 8px 24px 0 rgba(66, 68, 90, 1);
+}
+
+.mem:hover > .img {
+    width: 30vw;
+}
+
+.mem:hover > .mem_container  .cross {
+    transform: rotate(45deg);
+}
+
+.img:hover {
+    transform: scale(1.01);
+    box-shadow: 8px 8px 24px 0 rgba(66, 68, 90, 1);
+
+}

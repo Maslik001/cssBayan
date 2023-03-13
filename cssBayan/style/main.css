@@ -1,18 +1,19 @@
-body {
-    font-family: "Century Gothic", sans-serif;
-    margin: 0 auto;
-    box-sizing: border-box;
+body{
     background-color: #9d9d9d;
 }
 
-section {
-    padding-left: 0;
+.bayan {
+    font-family: "Century Gothic", sans-serif;
+    box-sizing: border-box;
 }
 
-h2 {
+.title {
     font-size: 2em;
     font-weight: bold;
     text-align: center;
+    margin: 0;
+    padding: 0.5em 0;
+    transition: all .3s linear;
 }
 
 .mem {
@@ -24,11 +25,11 @@ h2 {
 
 .mem_container {
     display: flex;
-    width: 60%;
+    width: 24%;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     border-radius: 1em;
-    padding: 1%;
+    padding: 0.4em;
     background-color: rgb(204, 204, 204);
     transition: all .3s linear;
     cursor: pointer;
@@ -48,17 +49,23 @@ h2 {
     max-height: 30vh;
     display: flex;
     border-radius: 1em;
-    margin: 1%;
+    margin: 0.5em;
     justify-content: center;
     transition: all 1s ease;
     transform: scale(0.9);
+    box-shadow: 8px 8px 24px 0 rgba(66, 68, 90, 1);
 }
 
-.active {
+.active_img {
     width: 30vw;
     transform: scale(0.9);
 }
-
+.active_container{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+    box-shadow: 8px 8px 24px 0 rgba(66, 68, 90, 1);
+}
 .mem:hover > .mem_container {
     background-color: rgba(0, 0, 0, 0.5);
     color: rgb(255, 255, 255);
@@ -74,8 +81,11 @@ h2 {
     transform: rotate(45deg);
 }
 
-.img:hover {
-    transform: scale(1.01);
-    box-shadow: 8px 8px 24px 0 rgba(66, 68, 90, 1);
+.img:active {
+    transform: scale(0.5);
+    box-shadow: 8px 7px 7px 1px rgb(66 68 90);
+}
 
+.title:hover{
+    color: #ffffff;
 }

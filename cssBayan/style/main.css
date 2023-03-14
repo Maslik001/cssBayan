@@ -1,12 +1,6 @@
 body{
     background-color: #9d9d9d;
 }
-
-.bayan {
-    font-family: "Century Gothic", sans-serif;
-    box-sizing: border-box;
-}
-
 .title {
     font-size: 2em;
     font-weight: bold;
@@ -15,24 +9,29 @@ body{
     padding: 0.5em 0;
     transition: all .3s linear;
 }
-
-.mem {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.memo{
+    font-family: "Century Gothic", sans-serif;
+    box-sizing: border-box;
 }
-
-.mem_container {
+.memo_container {
     display: flex;
-    width: 24%;
+    width: 50%;
     justify-content: space-between;
     align-items: center;
     border-radius: 1em;
-    padding: 0.4em;
+    padding: 0.8em;
     background-color: rgb(204, 204, 204);
     transition: all .3s linear;
     cursor: pointer;
+}
+.memo_container_label{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.memo_container_input{
+    appearance: none;
 }
 
 .cross {
@@ -40,52 +39,35 @@ body{
     transition: all .3s ease;
 }
 
-.cross_active {
-    transform: rotate(45deg);
-}
-
-.img {
+.image {
     width: 0;
-    max-height: 30vh;
+    max-height: 21vh;
+
     display: flex;
     border-radius: 1em;
-    margin: 0.5em;
+    margin: 0;
     justify-content: center;
     transition: all 1s ease;
-    transform: scale(0.9);
     box-shadow: 8px 8px 24px 0 rgba(66, 68, 90, 1);
+    cursor: pointer;
 }
 
-.active_img {
-    width: 30vw;
-    transform: scale(0.9);
-}
-.active_container{
+.memo_container_input:checked + label > .memo_container{
     background-color: rgba(0, 0, 0, 0.5);
     color: rgb(255, 255, 255);
     transform: scale(1.1);
     box-shadow: 8px 8px 24px 0 rgba(66, 68, 90, 1);
 }
-.mem:hover > .mem_container {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgb(255, 255, 255);
-    transform: scale(1.1);
-    box-shadow: 8px 8px 24px 0 rgba(66, 68, 90, 1);
-}
-
-.mem:hover > .img {
+.memo_container_input:checked + label > .image{
     width: 30vw;
+    transform: scale(0.9);
 }
-
-.mem:hover > .mem_container  .cross {
+.memo_container_input:not(:checked) + label > .image{
+    width: 0;
+}
+.memo_container_input:checked + label> .memo_container > .cross{
     transform: rotate(45deg);
 }
-
-.img:active {
-    transform: scale(0.5);
-    box-shadow: 8px 7px 7px 1px rgb(66 68 90);
-}
-
-.title:hover{
-    color: #ffffff;
+.memo_container_input:not(:checked) + label> .memo_container > .cross{
+    transform: rotate(90deg);
 }

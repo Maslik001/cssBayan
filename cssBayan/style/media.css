@@ -1,29 +1,56 @@
-@media (max-width: 1920px) {
-    .mem_container {
+@media (min-width: 320px) {
+    .title {
+        font-size: 1em;
+    }
+    .memo_container {
+        font-size: 0.4em;
+    }
+}
+@media (min-width: 520px) {
+    .memo_container {
+        font-size: 0.5em;
+    }
+    .image {
+        margin: 0.2em;
+    }
+}
+@media (min-width: 820px) {
+    .memo_container {
+        font-size: 0.9em;
+    }
+    .title{
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .memo_container {
         font-size: 1.2em;
     }
     .title{
         font-size: 3em;
     }
-}
-
-@media (max-width: 820px) {
-    .mem_container {
-        font-size: 0.7em;
+    .title:hover{
+        color: #ffffff;
+    }
+    .image:hover  {
+        transform: scaleX(1) !important;
+        box-shadow: 16px 7px 19px 1px rgb(78 78 78);
+    }
+    .memo_container_input:hover + label > .image{
+        width: 30vw;
+        transform: scale(0.9);
+    }
+    .memo_container_input:hover + label> .memo_container > .cross{
+        transform: rotate(45deg);
     }
 }
 
-@media (max-width: 520px) {
-    .mem_container {
-        font-size: 0.5em;
-    }
-}
 
-@media (max-width: 320px) {
-    .title, .mem_container {
-        font-size: 0.4em;
-    }
-}
+
+
+
+
 
 
 

@@ -1,0 +1,71 @@
+body{
+    background-color: #9d9d9d;
+}
+.title {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0.5em 0;
+    transition: all .3s linear;
+}
+.memo{
+    font-family: "Century Gothic", sans-serif;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+.memo_container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1em;
+    padding: 0.8em;
+    background-color: rgb(204, 204, 204);
+    transition: all .3s linear;
+}
+.memo_container_label{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.memo_container_input{
+    appearance: none;
+}
+
+.cross {
+    width: 2vw;
+    transition: all .3s ease;
+}
+
+.image {
+    width: 0;
+    max-height: 21vh;
+    display: flex;
+    border-radius: 1em;
+    margin: 0;
+    justify-content: center;
+    transition: all 1s ease;
+    box-shadow: .5em .5em 1.5em 0 rgba(66, 68, 90, 1);
+}
+
+.memo_container_input:checked + label > .memo_container{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+    box-shadow: .5em .5em 1.5em 0 rgba(66, 68, 90, 1);
+}
+.memo_container_input:checked + label > .image{
+    width: 25vw;
+    transform: scale(0.9);
+}
+.memo_container_input:not(:checked) + label > .image{
+    width: 0;
+}
+.memo_container_input:checked + label> .memo_container > .cross{
+    transform: rotate(45deg);
+}
+.memo_container_input:not(:checked) + label> .memo_container > .cross{
+    transform: rotate(90deg);
+}

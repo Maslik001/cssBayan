@@ -12,17 +12,17 @@ body{
 .memo{
     font-family: "Century Gothic", sans-serif;
     box-sizing: border-box;
+    margin: 0 auto;
 }
 .memo_container {
     display: flex;
-    width: 50%;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     border-radius: 1em;
     padding: 0.8em;
     background-color: rgb(204, 204, 204);
     transition: all .3s linear;
-    cursor: pointer;
 }
 .memo_container_label{
     display: flex;
@@ -42,24 +42,22 @@ body{
 .image {
     width: 0;
     max-height: 21vh;
-
     display: flex;
     border-radius: 1em;
     margin: 0;
     justify-content: center;
     transition: all 1s ease;
-    box-shadow: 8px 8px 24px 0 rgba(66, 68, 90, 1);
-    cursor: pointer;
+    box-shadow: .5em .5em 1.5em 0 rgba(66, 68, 90, 1);
 }
 
 .memo_container_input:checked + label > .memo_container{
     background-color: rgba(0, 0, 0, 0.5);
     color: rgb(255, 255, 255);
     transform: scale(1.1);
-    box-shadow: 8px 8px 24px 0 rgba(66, 68, 90, 1);
+    box-shadow: .5em .5em 1.5em 0 rgba(66, 68, 90, 1);
 }
 .memo_container_input:checked + label > .image{
-    width: 30vw;
+    width: 25vw;
     transform: scale(0.9);
 }
 .memo_container_input:not(:checked) + label > .image{

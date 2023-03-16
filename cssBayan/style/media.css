@@ -2,50 +2,89 @@
     .title {
         font-size: 1em;
     }
+    .memo{
+        width: 75%;
+    }
+    .cross {
+        width: 4vw;
+    }
     .memo_container {
-        font-size: 0.4em;
+        font-size: 0.6em;
+    }
+    .memo_container_input:checked + label > .image{
+        width: 50vw;
+        min-height: 15vh;
     }
 }
 @media (min-width: 520px) {
-    .memo_container {
-        font-size: 0.5em;
-    }
     .image {
         margin: 0.2em;
+    }
+    .memo_container {
+        font-size: 1.3em;
     }
 }
 @media (min-width: 820px) {
     .memo_container {
-        font-size: 0.9em;
+        font-size: 1.9em;
     }
     .title{
         font-size: 2em;
+    }
+    .memo_container_input:checked + label > .image{
+        min-height: 50vh;
     }
 }
 
 @media (min-width: 1200px) {
     .memo_container {
         font-size: 1.2em;
+        cursor: pointer;
+        height: 1em;
+    }
+    .memo{
+        width: 50%;
     }
     .title{
         font-size: 3em;
+    }
+    .cross{
+        width: 0;
+    }
+    .image{
+        cursor: pointer;
+    }
+    .memo_container_input:checked + label > .image {
+        width: 30vw;
+        min-height: 20vh;
+    }
+
+}
+@media(hover:hover) and (min-width: 1200px){
+    .memo:hover .cross{
+        width: 2vw;
     }
     .title:hover{
         color: #ffffff;
     }
     .image:hover  {
         transform: scaleX(1) !important;
-        box-shadow: 16px 7px 19px 1px rgb(78 78 78);
+        box-shadow: 1em .5em 1.25em 0 rgb(78 78 78);
     }
     .memo_container_input:hover + label > .image{
-        width: 30vw;
+        width: 25vw;
         transform: scale(0.9);
     }
     .memo_container_input:hover + label> .memo_container > .cross{
         transform: rotate(45deg);
     }
+    .memo_container_input:hover + label> .memo_container > b{
+        color: rgb(100, 148, 245);
+    }
+    .memo_container_input:hover + label> .memo_container{
+        background-color: rgb(33, 33, 33);
+    }
 }
-
 
 
 
